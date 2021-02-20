@@ -39,6 +39,7 @@ cc_library_headers {
         "include",
         "libqdutils",
         "gralloc",
+        "services",
     ],
     header_libs: ["libhardware_headers"],
     export_header_lib_headers: ["libhardware_headers"],
