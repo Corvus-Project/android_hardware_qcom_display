@@ -32,6 +32,7 @@
 
 #include <dlfcn.h>
 #include "frame_scheduler_intf.h"
+#include "display_extn_intf.h"
 
 #define COMPOSER_EXTN_REV_MAJOR (1)
 #define COMPOSER_EXTN_REV_MINOR (0)
@@ -44,6 +45,8 @@ class ComposerExtnIntf {
  public:
   virtual int CreateFrameScheduler(FrameSchedulerIntf **intf) = 0;
   virtual void DestroyFrameScheduler(FrameSchedulerIntf *intf) = 0;
+  virtual int CreateDisplayExtn(DisplayExtnIntf **intf) = 0;
+  virtual void DestroyDisplayExtn(DisplayExtnIntf *intf) = 0;
  protected:
   virtual ~ComposerExtnIntf() { }
 };
